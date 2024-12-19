@@ -1,0 +1,55 @@
+:root {
+    --space-none: 0;
+    --space-extraSmall: 0.15rem;
+    --space-small: 0.25rem;
+    --space-medium: 0.5rem;
+    --space-large: 1rem;
+    --space-extraLarge: 2rem;
+  
+    --font-sans: Roboto, sans-serif;
+    --font-monospace: "Roboto Mono", monospace;
+  
+    --color-background: #25272a;
+    --color-lightBackground: #131313;
+    --color-primary: #00E3A9;
+    --color-blue: #56A1FF;
+    --color-red: #FF703B;
+    --color-grey: rgba(169,169,169,0.7);
+    --color-darkGrey: #262626;
+    --color-text-normal: #ffffff;
+    --color-text-dimmed: #A9A9A9;
+  
+    --fontSize-extraSmall: 0.85rem;
+    --fontSize-small: 1rem;
+    --fontSize-medium: 1.25rem;
+    --fontSize-large: 2.25rem;
+  
+    --fontWeight-regular: 400;
+    --fontWeight-semiBold: 500;
+    --fontWeight-bold: 700;
+  
+    --lineHeight-small: 1.5rem;
+    --lineHeight-medium: 1.75rem;
+    --lineHeight-large: 2.5rem;
+  
+    --borderRadius-small: 20px;
+    --borderRadius-medium: 24px;
+    --borderRadius-large: 32px;
+  
+    --gradient-background: linear-gradient(
+      180deg,
+      rgba(62, 67, 76, 1) 0%,
+      rgba(30, 32, 36, 1) 100%
+    );
+    --gradient-inner: linear-gradient(
+      180deg,
+      rgba(49, 56, 61, 1) 0%,
+      rgba(24, 25, 29, 1) 100%
+    );
+  
+    --transition: all 0.20s cubic-bezier(0.645, 0.045, 0.355, 1);
+  
+    --boxShadow-containers: 2vw 2vw 8vw black;
+    --boxShadow-buttons: 0.2vw 0.2vw 0.5vw #16191b, -0.2vw -0.2vw 0.5vw #363e44;
+  }
+  

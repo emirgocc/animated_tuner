@@ -1,0 +1,89 @@
+/* home.css */
+
+@import './theme.css'; /* theme.css importu (CSS Preprocessor gibi) */
+
+.main {
+  margin: 0px auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 150px;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 0px 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 0px 25px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    justify-content: center;
+  }
+}
+
+.container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-extraLarge);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+  padding: 2rem;
+  height: 600px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: var(--borderRadius-medium);
+  box-shadow: var(--boxShadow-containers);
+  background: var(--gradient-background);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--borderRadius-small);
+  transform: scale(0.98, 0.98);
+  background: var(--gradient-inner);
+}
+
+@media screen and (max-width: 576px) {
+  .box {
+    width: 100%;
+    height: 550px;
+  }
+}

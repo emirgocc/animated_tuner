@@ -1,0 +1,33 @@
+/* globals.css */
+@import './theme.css'; /* theme.css importu (CSS Preprocessor gibi) */
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans); /* theme.fonts.sans */
+  background: var(--color-background); /* theme.colors.background */
+  color: var(--color-text-dimmed); /* theme.colors.text.dimmed */
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  color: var(--color-primary); /* theme.colors.primary */
+  font-weight: var(--fontWeight-bold); /* theme.fontWeight.bold */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
