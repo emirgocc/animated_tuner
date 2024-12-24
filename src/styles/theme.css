@@ -11,7 +11,7 @@
   
     --color-background: #25272a;
     --color-lightBackground: #131313;
-    --color-primary: #00E3A9;
+    --color-primary: #EA506F;
     --color-blue: #56A1FF;
     --color-red: #FF703B;
     --color-grey: rgba(169,169,169,0.7);
@@ -32,6 +32,9 @@
     --lineHeight-medium: 1.75rem;
     --lineHeight-large: 2.5rem;
   
+    --border-width: 4px;
+    --border-color: #3E434C;
+
     --borderRadius-small: 20px;
     --borderRadius-medium: 24px;
     --borderRadius-large: 32px;

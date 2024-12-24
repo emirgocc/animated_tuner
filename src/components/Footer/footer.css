@@ -1,0 +1,53 @@
+/* footer.css */
+
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100px;
+    padding: var(--space-extraLarge);
+    text-align: center;
+    font-size: var(--fontSize-extraSmall);
+    color: var(--color-grey);
+  }
+  
+  .socialsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-extraLarge);
+  }
+  
+  .link {
+    padding-left: var(--space-large);
+    padding-right: var(--space-large);
+    transition: var(--transition);
+  }
+  
+  .link:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-text-dimmed);
+    transition: var(--transition);
+  }
+  
+  .icon:hover {
+      color: var(--color-primary);
+  }
+  
+  .author {
+    padding-left: var(--space-small);
+    padding-right: var(--space-small);
+    transition: var(--transition);
+    font-weight: var(--fontWeight-bold);
+    color: var(--color-text-dimmed);
+  }
+  
+  .author:hover {
+    transform: scale(1.1);
+    color: var(--color-primary);
+  }

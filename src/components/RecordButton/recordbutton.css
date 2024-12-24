@@ -1,0 +1,58 @@
+/* recordbutton.css */
+
+
+.buttonBase {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow-buttons);
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .innerBase {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: var(--font-size-small);
+    transform: scale(0.90);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .buttonPressed {
+    background: linear-gradient(145deg, #EA506F 0%, #b73e56 100%);
+  }
+  
+  .buttonIdle {
+      background: linear-gradient(135deg, rgba(32, 37, 41, 1) 0%, rgba(22, 24, 25, 1) 100%);
+  }
+  
+  
+  .innerPressed {
+      background: linear-gradient( 145deg, #8b3042 0%, #EA506F 100% );
+      box-shadow: inset 0.75vw 0.75vw 0.75vw rgba(0, 0, 0, 0.2);
+      color: var(--color-text-normal);
+  }
+  
+  
+  .innerIdle {
+      box-shadow: inset 0 0 0.3vw rgba(255, 255, 255, 0.1);
+      background: linear-gradient(145deg, rgba(40, 43, 48, 1) 0%, rgba(29, 32, 35, 1) 100%);
+      color: var(--color-text-dimmed);
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
