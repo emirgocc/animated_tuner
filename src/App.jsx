@@ -180,7 +180,7 @@ function App() {
         <span style={{ 
             color: "var(--color-text-dimmed)",
             display: "inline-block",
-            fontSize: "1.20rem" ,
+            fontSize: "1.20rem" 
         }}>
             emirgocc's{" "}
         </span>

@@ -15,7 +15,7 @@
   .socialsContainer {
     display: flex;
     justify-content: center;
-    margin-bottom: var(--space-extraLarge);
+    margin-bottom: var(--space-large);
   }
   
   .link {
