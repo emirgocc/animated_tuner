@@ -20,7 +20,7 @@ function Footer() {
         ))}
       </div>
       <div>
-        From 22 🇹🇷 with love
+        From 22 with love
         <a
           className="author"
           target="_blank"
