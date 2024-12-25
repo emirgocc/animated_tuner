@@ -56,3 +56,17 @@
     width: 2rem;
     height: 2rem;
   }
+  .buttonBase .innerPressed {
+    background: linear-gradient( 145deg, #8b3042 0%, #EA506F 100% );
+    box-shadow: inset 0.75vw 0.75vw 0.75vw rgba(0, 0, 0, 0.2);
+    color: var(--color-text-normal);
+}
+
+.buttonBase .innerPressed .icon {
+    filter: brightness(1); /* veya */
+    color: var(--color-text-normal);
+}
+
+.buttonBase .innerIdle .icon {
+    color: var(--color-text-dimmed);
+}

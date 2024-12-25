@@ -20,14 +20,14 @@ function Footer() {
         ))}
       </div>
       <div>
-        From 22 🇹🇷 with love
+        From 22 with love
         <a
           className="author"
           target="_blank"
           rel="noopener noreferrer"
           href="null"
         >
-          Emir Göç
+         Emir Göç
         </a>
       </div>
     </footer>
