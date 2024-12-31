@@ -1,0 +1,89 @@
+.note-display {
+  font-size: var(--fontSize-large);
+  font-weight: 500;
+  margin: var(--space-medium) 0 var(--space-small);
+  user-select: none;
+}
+
+.frequency-display {
+  font-size: var(--fontSize-small);
+  color: var(--color-grey);
+  user-select: none;
+  margin-bottom: var(--space-small);
+}
+
+/* Gauge üzerindeki tüm çizgi ve işaretleri gizle */
+svg path[stroke="#EDEDED"],
+svg line,
+svg path[stroke="#c6c6c6"] {
+  display: none !important;
+  stroke: transparent !important;
+  opacity: 0 !important;
+}
+
+/* SVG içindeki text elementlerini gizle */
+svg text,
+svg tspan {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Orta çubuklar için animasyon */
+@keyframes pulseArc {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Orta bölümdeki arc'lar için stil - sadece in-tune class'ı varken animasyon göster */
+.doughnut g.subArc:nth-child(14) path.in-tune {
+  animation: pulseArc 1s ease-in-out infinite;
+  animation-delay: 0.4s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.doughnut g.subArc:nth-child(15) path.in-tune {
+  animation: pulseArc 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.doughnut g.subArc:nth-child(16) path.in-tune {
+  animation: pulseArc 1s ease-in-out infinite;
+  animation-delay: 0s;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(1.25);
+}
+
+.doughnut g.subArc:nth-child(17) path.in-tune {
+  animation: pulseArc 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.doughnut g.subArc:nth-child(18) path.in-tune {
+  animation: pulseArc 1s ease-in-out infinite;
+  animation-delay: 0.4s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* Hover efekti */
+.doughnut g.subArc:nth-child(14):hover path,
+.doughnut g.subArc:nth-child(15):hover path,
+.doughnut g.subArc:nth-child(16):hover path,
+.doughnut g.subArc:nth-child(17):hover path,
+.doughnut g.subArc:nth-child(18):hover path {
+  filter: brightness(1.2);
+}
+
+/* Alt çizgileri gizle */
+.tick-line,
+.tick-value {
+  display: none !important;
+} 

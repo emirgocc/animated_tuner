@@ -16,12 +16,12 @@ export default function autoCorrelate(buf, sampleRate) {
     rms = Math.sqrt(rms / SIZE);
   
     // If the signal is too weak, return -1.
-    if (rms < 0.01) return -1;
+    if (rms < 0.005) return -1;
   
     // Trim the buffer to ignore low signal regions.
     let r1 = 0,
       r2 = SIZE - 1;
-    const threshold = 0.2;
+    const threshold = 0.1;
   
     for (let i = 0; i < SIZE / 2; i++) {
       if (Math.abs(buf[i]) < threshold) {
@@ -63,13 +63,25 @@ export default function autoCorrelate(buf, sampleRate) {
   
     // Refine the period (T0) using quadratic interpolation.
     let T0 = maxpos;
-    const x1 = correlation[T0 - 1],
-      x2 = correlation[T0],
-      x3 = correlation[T0 + 1];
-  
-    const a = (x1 + x3 - 2 * x2) / 2;
-    const b = (x3 - x1) / 2;
-    if (a) T0 = T0 - b / (2 * a);
+    
+    // Daha hassas interpolasyon için kontrol ekleyelim
+    if (T0 > 0 && T0 < correlation.length - 1) {
+      const x1 = correlation[T0 - 1],
+            x2 = correlation[T0],
+            x3 = correlation[T0 + 1];
+      
+      const a = (x1 + x3 - 2 * x2) / 2;
+      const b = (x3 - x1) / 2;
+      
+      // a değeri çok küçükse interpolasyon yapmayalım
+      if (Math.abs(a) > 0.0001) {
+        const adjustedT0 = T0 - b / (2 * a);
+        // Interpolasyon sonucu makul bir aralıktaysa kullanalım
+        if (Math.abs(adjustedT0 - T0) < 1) {
+          T0 = adjustedT0;
+        }
+      }
+    }
   
     // Return the pitch frequency.
     return sampleRate / T0;
